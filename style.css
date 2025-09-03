@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 50px;
+}
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo left, menu right */
+    align-items: center;
+    height: 100%;  
+    background: rgb(49, 137, 179);
+}
+
+/* Logo */
+.logo img {
+    height: 70px; /* Adjust size */
+    width: 70px;
+    margin-top: 10px;
+}
+
+/* Menu list */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* spacing between menu items */
+    margin-right: 30px;
+}
+
+/* Menu links */
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links li a:hover {
+    color: #00d0ff;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url("website(home1).jpeg") no-repeat center center/cover;
+    color: #fff;
+    min-height: 90vh;
+}
+
+.hero-text {
+    max-width: 900px;
+    margin-left: 50px;
+}
+
+.hero-text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    color: #00d0ff;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.hero-text p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.3;
+   
+}
+
+.hero-image img {
+    position: relative;
+    border-radius: 30px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    left: 10px;
+    z-index: 1;
+    margin-right: 10px;
+    margin-left: 250px;
+    
+}
+.profile-box {
+    background: rgb(29, 87, 128); 
+    height: 400px;
+    width: 400px;   
+    position: absolute;
+    z-index: 0;
+    border-radius: 30px;
+    left: 850px;
+    bottom:  100px;
+    margin-left: 200px;
+
+}
