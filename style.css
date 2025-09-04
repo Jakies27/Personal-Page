@@ -49,11 +49,27 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url("website(home1).jpeg") no-repeat center center/cover;
     color: #fff;
-    min-height: 90vh;
+    min-height: 100vh;
+    width: 100%;   /* make hero full width */
+    overflow: hidden;
+    margin: 0;          /* remove outside spacing */
+    padding: 0;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   /* fill entire hero */
+    height: 100%;
+    z-index: -1;
 }
 
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crops but fills container */
+}
 .hero-text {
     max-width: 900px;
     margin-left: 50px;
@@ -107,4 +123,68 @@ header{
     bottom:  100px;
     margin-left: 200px;
 
+}
+.about-section {
+    background: #f5f5dc; /* light background */
+    padding: 60px 10%;
+    margin: 0;   
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Left column images */
+.about-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #0a395c; /* blue background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-images img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Right column text */
+.about-text {
+    flex: 1.2;
+}
+
+.about-text .tag {
+    display: inline-block;
+    background: #0a395c;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    font-family: 'League Spartan', sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+.about, .hero {
+    max-width: 1366px;
+    width: 100%;        
+    max-height: 768px;
+    height: 100vh;      /* adjusts to screen height */
+    margin: 0 auto;
 }
