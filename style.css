@@ -27,8 +27,9 @@ header{
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px; /* spacing between menu items */
+    gap: 30px; /* spacing between menu items */
     margin-right: 30px;
+    font-size: 20px;
 }
 
 /* Menu links */
@@ -38,6 +39,7 @@ header{
     font-weight: bold;
     transition: 0.3s;
     font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
 }
 
 .nav-links li a:hover {
@@ -50,19 +52,20 @@ header{
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;   /* make hero full width */
     overflow: hidden;
     margin: 0;          /* remove outside spacing */
     padding: 0;
+    
 }
 .background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;   /* fill entire hero */
-    height: 100%;
     z-index: -1;
+    max-height: 768px
 }
 
 .background img {
@@ -72,7 +75,7 @@ header{
 }
 .hero-text {
     max-width: 900px;
-    margin-left: 50px;
+    
 }
 
 .hero-text h3 {
@@ -83,12 +86,12 @@ header{
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: 'League Spartan', sans-serif;
     font-weight: bold;
     color: #00d0ff;
     margin-bottom: 20px;
-    max-width: 100%;
+    max-width: 800px;
 }
 
 .hero-text p {
@@ -110,6 +113,7 @@ header{
     z-index: 1;
     margin-right: 10px;
     margin-left: 250px;
+    bottom: 20px;
     
 }
 .profile-box {
@@ -124,67 +128,176 @@ header{
     margin-left: 200px;
 
 }
+
+
+
+
 .about-section {
-    background: #f5f5dc; /* light background */
-    padding: 60px 10%;
-    margin: 0;   
+    background: rgb(243, 243, 224) ; 
+     
 }
-
 .about-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+  max-width: 1366px;
+width: 100%;        
+max-height: 768px;
+height: 100vh;     
+}
+  
+.about-box {
+   background: rgb(29, 87, 128); 
+    height: 100%;
+    width: 45%;   
+    position: absolute;
+    z-index: 0;
 }
 
-/* Left column images */
 .about-images {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: #0a395c; /* blue background */
-    padding: 20px;
-    border-radius: 10px;
+  position: absolute;      
+  display: flex;
+  flex-direction: column;    
+  align-items: center;       
+  gap: 0;                    
+  padding: 0;               
+ left: 130px;
+ top: 130px;
+ 
+ 
 }
 
-.about-images img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
+.about-images .Web,
+.about-images .CTF {
+  width: calc(100%);         
+  display: block;
+}
+.about-images .Web img,
+.about-images .CTF img {
+  display: block;            
+width: 450px;
+height: 250px;
+object-fit: cover;   
+  margin: 0;                 
+  z-index: 1;                
+
 }
 
 /* Right column text */
 .about-text {
     flex: 1.2;
+    margin-left: 700px;
+    margin-top: 90px;
+
 }
 
 .about-text .tag {
+    font-family: 'Poppins', sans-serif;
     display: inline-block;
-    background: #0a395c;
-    color: #fff;
+    background: rgb(49, 137, 179);
+    color: #000000;
     font-size: 0.9rem;
     font-weight: bold;
-    padding: 5px 12px;
-    border-radius: 12px;
+    padding: 5px 15px;
+    border-radius: 15px;
     margin-bottom: 15px;
+    text-decoration: underline;
+    font-size: 20px;
 }
 
 .about-text h2 {
-    font-size: 2rem;
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     margin-bottom: 20px;
     line-height: 1.3;
+    font-size: 50px;
 }
 
 .about-text p {
-    font-size: 1.1rem;
+    font-size: 25px;
     line-height: 1.8;
     text-align: justify;
+     font-family: 'Poppins', sans-serif;
 }
-.about, .hero {
+.about, .hero, .services-section {
     max-width: 1366px;
     width: 100%;        
     max-height: 768px;
-    height: 100vh;      /* adjusts to screen height */
+    height: 100vh;      
     margin: 0 auto;
 }
+
+
+
+
+.services-section {
+  background: rgb(248, 250, 240);
+  background-size: cover;
+}
+
+.services-container {
+  text-align: center;
+}
+
+.services-header .services-tag {
+  display: inline-block;
+  background: rgb(49, 137, 179);
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services-header h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+/* Grid layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* Each card */
+.service-card {
+  background: rgb(248, 250, 240);
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-card .icon img {
+  width: 60px;   /* adjust size */
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
