@@ -3,9 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 header{
     height: 50px;
+    position: fixed;
+    z-index: 1000;
+    width: 1540px;
 }
 /* Navbar container */
 .navbar {
@@ -14,6 +21,7 @@ header{
     align-items: center;
     height: 100%;  
     background: rgb(49, 137, 179);
+    
 }
 
 /* Logo */
@@ -109,11 +117,11 @@ header{
     height: 400px;
     object-fit: cover;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    left: 10px;
+    left: 120px;
     z-index: 1;
-    margin-right: 10px;
-    margin-left: 250px;
-    bottom: 20px;
+    margin-right: 100px;
+    margin-left: 150px;
+    bottom: 10px;
     
 }
 .profile-box {
@@ -219,24 +227,28 @@ object-fit: cover;
     text-align: justify;
      font-family: 'Poppins', sans-serif;
 }
-.about, .hero, .services-section {
-    max-width: 1366px;
-    width: 100%;        
-    max-height: 768px;
-    height: 100vh;      
-    margin: 0 auto;
+
+
+
+
+
+
+
+.services-box {
+   background: rgb(248, 250, 240); 
+    height: 100%;
+    width: 100%;   
+    position: absolute;
+    z-index: -1;
+    
+    
 }
 
 
-
-
-.services-section {
-  background: rgb(248, 250, 240);
-  background-size: cover;
-}
 
 .services-container {
   text-align: center;
+  
 }
 
 .services-header .services-tag {
@@ -250,12 +262,15 @@ object-fit: cover;
   margin-bottom: 15px;
   text-decoration: underline;
   font-family: 'Poppins', sans-serif;
+  margin-top: 70px;
+  margin-left: 150px;
 }
 
 .services-header h2 {
   font-family: 'Libre Baskerville', serif;
   font-size: 42px;
   margin-bottom: 50px;
+  margin-left: 150px;
 }
 
 /* Grid layout */
@@ -263,6 +278,7 @@ object-fit: cover;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
+  margin-left: 150px;
 }
 
 /* Each card */
@@ -272,6 +288,7 @@ object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
 }
 
 .service-card:hover {
@@ -284,6 +301,7 @@ object-fit: cover;
   height: 60px;
   object-fit: contain;
   margin-bottom: 15px;
+  
 }
 
 
@@ -301,3 +319,245 @@ object-fit: cover;
   font-family: 'Poppins', sans-serif;
 }
 
+
+
+
+
+/* Experience Section */
+/* ===== Replace your existing experience CSS with this block ===== */
+
+ .experience-section {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  box-sizing: border-box;
+
+   /* FIXED HEIGHT */
+}
+
+
+.experience-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 40px;
+  max-width: 1366px;   /* FIXED WIDTH */
+  max-height: 768px; 
+  
+}
+
+.experience-box {
+   background: rgb(29, 87, 128); 
+    height:100%;
+    width: 100%;   
+    position: absolute;
+    z-index: -1;
+    
+    
+}
+
+.logo2 {
+  position: absolute;
+    display: flex;            
+width: 100px;
+height: 500px;
+left: 415px;
+top: 200px;
+object-fit: cover;   
+  margin: 0;                 
+  z-index: 0; 
+}
+
+
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.experience-tag {
+  display: inline-block;
+  background: rgb(49, 137, 179);
+  color: #000;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 70px;
+}
+
+.experience-header h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* TIMELINE ----------------------------------------------------- */
+.timeline {
+  position: relative;
+  margin: 20px 0 0;
+  padding: 20px 0 40px;
+}
+
+/* center vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* each item wrapper */
+.timeline > div {
+  position: relative;
+  min-height: 100px;   /* reduce height */
+  margin: 20px 0;              /* vertical gap */
+}
+
+/* circle marker (centered on line) */
+.timeline .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* optional inner dot to match screenshot */
+.timeline .circle::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(29,87,128);
+  display: block;
+}
+
+/* content card style (both sides) */
+.timeline .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(50% - 90px); /* card width, leaves room for center line */
+  padding: 20px 26px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  box-shadow: none;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+/* left-side items (content appears on the left of the center line) */
+.cyber .content,
+.prog .content {
+  right: calc(50% + 30px);   /* push content to left side */
+  text-align: right;
+}
+
+/* right-side items (content appears on the right of the center line) */
+.Web .content,
+.graph .content {
+  left: calc(50% + 30px);    /* push content to right side */
+  text-align: left;
+}
+
+/* small horizontal connector between content and circle */
+.cyber .content::after,
+.prog .content::after,
+.Web .content::after,
+.graph .content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 4px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* connectors appear on correct side of the card */
+.cyber .content::after,
+.prog .content::after {
+  right: -28px;   /* connector extends rightwards to the center */
+}
+.Web .content::after,
+.graph .content::after {
+  left: -28px;    /* connector extends leftwards to the center */
+}
+
+/* heading style inside content */
+.timeline h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  display: inline-block;
+  border-bottom: 2px solid rgba(255,255,255,0.9);
+  padding-bottom: 6px;
+}
+
+/* paragraph style */
+.timeline p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.95);
+}
+
+/* make sure the circle stays on top on small screens */
+@media (max-width: 900px) {
+  .timeline::before { left: 28px; transform: none; } /* move line to left for mobile */
+  .timeline .circle { left: 28px; transform: translateY(-50%); }
+  .timeline .content {
+    position: relative;
+    width: calc(100% - 70px);
+    left: 70px;
+    transform: none;
+    top: auto;
+    margin: 18px 0;
+    text-align: left !important;
+  }
+  .cyber .content::after,
+  .prog .content::after,
+  .Web .content::after,
+  .graph .content::after {
+    display: none; /* no connectors on mobile (cleaner) */
+  }
+
+  /* reduce spacing */
+  .timeline > div { margin: 18px 0; min-height: auto; }
+}
+
+/* override any earlier rules that forced full-screen heights */
+.about, .hero, .services-section, .experience-container {
+  max-width: 1366px;
+  width: 100%;
+  max-height: 768px;
+  height: 100vh;
+  margin: 0;
+}
